@@ -8,10 +8,10 @@
 
 | Name      | GitHub Username   |
 |-----------|-------------------|
-| Alice     | @alice-codes      |
-| Bob       | @bob-the-builder  |
-| Charlie   | @charlie-dev      |
-| Dana      | @dana-designer    |
+| Tom       | @tomkabel         |
+| Hanna     | @hrauds           |
+| Kevin     | @Kevindaman       |
+| Tener     | @tener-ilistom    |
 
 ## Our Workflow
 
