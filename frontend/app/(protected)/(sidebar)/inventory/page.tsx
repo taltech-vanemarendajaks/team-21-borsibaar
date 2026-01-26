@@ -734,7 +734,7 @@ export default function Inventory() {
                   })
                 }
                 className="w-full px-3 py-2 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                rows="3"
+                rows={3}
                 placeholder="Product description (optional)"
               />
             </div>
@@ -937,7 +937,7 @@ export default function Inventory() {
                   setFormData({ ...formData, notes: e.target.value })
                 }
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                rows="3"
+                rows={3}
                 placeholder="e.g., Weekly restock"
               />
             </div>
@@ -1012,7 +1012,7 @@ export default function Inventory() {
                   setFormData({ ...formData, notes: e.target.value })
                 }
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                rows="3"
+                rows={3}
                 placeholder="e.g., Sold to customer"
               />
             </div>
@@ -1073,7 +1073,7 @@ export default function Inventory() {
                   setFormData({ ...formData, notes: e.target.value })
                 }
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                rows="3"
+                rows={3}
                 placeholder="e.g., Inventory correction"
               />
             </div>
