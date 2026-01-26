@@ -613,7 +613,10 @@ export default function Inventory() {
         open={showCreateProductModal}
         onOpenChange={setShowCreateProductModal}
       >
-        <DialogContent className="sm:max-w-[500px] max-h-[80vh] overflow-y-auto">
+        <DialogContent
+          className="sm:max-w-[500px] max-h-[80vh] overflow-y-auto [&::-webkit-scrollbar]:hidden"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
           <DialogHeader>
             <DialogTitle>Create New Product</DialogTitle>
             <DialogDescription>
