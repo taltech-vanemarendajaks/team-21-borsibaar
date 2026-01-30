@@ -109,7 +109,7 @@ export default function ClientProductsByCategory() {
   );
 
   return (
-    <div className="w-full bg-[#141224] text-white px-4 py-4 flex items-stretch justify-center flex flex-col gap-4">
+    <div className="w-full bg-[#141224] text-white px-4 py-4 flex items-stretch justify-center flex-col gap-4">
       <div className="flex flex-row gap-4">
         {err && (
           <div className="rounded-xl border border-red-700 bg-red-950/60 px-4 py-3 text-sm text-red-200">
@@ -271,7 +271,7 @@ export default function ClientProductsByCategory() {
       </div>
 
       {/* FOOTER – sponsorid, aga ikka sama kaardi sees */}
-      <footer className="mt-10 flex justify-center hidden"></footer>
+      <footer className="mt-10 justify-center hidden"></footer>
     </div>
   );
 }
