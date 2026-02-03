@@ -1,8 +1,4 @@
-# Team Information
-
-## Team Name
-
-// TODO: come up with team name
+# 21 Jump Street
 
 ## Team Members
 
