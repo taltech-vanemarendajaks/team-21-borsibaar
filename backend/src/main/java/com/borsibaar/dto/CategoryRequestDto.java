@@ -1,8 +1,10 @@
 package com.borsibaar.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 public record CategoryRequestDto(
-                @NotBlank String name,
-                Boolean dynamicPricing) {
+                @NotBlank @Size(max = 100, message="Name must be at most 100 characters") String name,
+                @NotNull(message="dynamicPricing cannot be null") Boolean dynamicPricing) {
 }
