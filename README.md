@@ -4,30 +4,30 @@
 
 ## 📖 What is Börsibaar?
 
-~~What if I told you, there's an app.... ~~ imagine you're at a bar where drink prices behave like stocks on the stock market. A popular beer that's selling fast might jump from €5 to €6, while a cocktail that's not moving drops from €8 to €7 to get people interested. That's the idea behind Börsibaar: a full-stack web app that makes bar pricing dynamic and fun, based on real-time demand.
+Imagine you're at a bar where drink prices behave like stocks on the stock market. A popular beer that's selling fast might jump from €5 to €6, while a cocktail that's not moving drops from €8 to €7 to get people interested. That's the idea behind Börsibaar: a full-stack web app that makes bar pricing dynamic and fun, based on real-time demand.
 
 Börsibaar is a complete system for managing a bar's operations with this gamified pricing. Bartenders use a tablet-friendly point-of-sale (POS) interface to ring up orders, prices adjust automatically, and customers can check a public "ticker" to see current prices.
 
 **Key Features:**
 
-* **Dynamic Pricing:** Prices rise when drinks sell quickly and fall when they don't, encouraging variety in orders.
-* **Public Price Ticker:** A live display showing current drink prices, like a stock ticker for the bar.
-* **POS System:** An easy-to-use interface for bartenders on tablets.
-* **Inventory Management:** Tools to track stock, manage products, and handle the business side.
+- **Dynamic Pricing:** Prices rise when drinks sell quickly and fall when they don't, encouraging variety in orders.
+- **Public Price Ticker:** A live display showing current drink prices, like a stock ticker for the bar.
+- **POS System:** An easy-to-use interface for bartenders on tablets.
+- **Inventory Management:** Tools to track stock, manage products, and handle the business side.
 
 ## 🏗 How It's Built
 
-* **Backend:** Built with Spring Boot 3.x and Java 21 (todo: CONFIRM/update), using PostgreSQL for data storage and Spring Security for authentication via OAuth2 and JWT.
-* **Frontend:** Uses Next.js 15 with the App Router, TypeScript, Tailwind CSS, and Shadcn UI for a clean, responsive design.
-* **DevOps:** Docker setup for easy local development and database handling.
+- **Backend:** Built with Spring Boot 3.x and Java 21 (todo: CONFIRM/update), using PostgreSQL for data storage and Spring Security for authentication via OAuth2 and JWT.
+- **Frontend:** Uses Next.js 15 with the App Router, TypeScript, Tailwind CSS, and Shadcn UI for a clean, responsive design.
+- **DevOps:** Docker setup for easy local development and database handling.
 
 ## 🛠 What You Need to Run It
 
 Make sure you have these installed:
 
-* **Java JDK 21**
-* **Node.js 20+**
-* **Docker & Docker Compose**
+- **Java JDK 21**
+- **Node.js 20+**
+- **Docker & Docker Compose**
 
 ## 🚀 Getting Started
 
@@ -36,22 +36,13 @@ Make sure you have these installed:
 1. Copy `.sample.env` to `.env` in the root directory.
 2. Add your Google OAuth credentials (needed for login).
 
-### 2. Start the Database
+### 2. Start the dev Database & Backend
 
 ```bash
 docker compose up -d
 ```
 
-### 3. Launch the Backend
-
-```bash
-cd backend
-./mvnw spring-boot:run
-```
-
-API documentation is at: `http://localhost:8080/swagger-ui.html`
-
-### 4. Launch the Frontend
+### 3. Launch the Frontend
 
 ```bash
 cd frontend
@@ -102,19 +93,19 @@ spring.application.name=Borsibaar
 
 Organized in layers:
 
-* `controller/` - Handles API requests.
-* `service/` - Contains business logic, including pricing calculations.
-* `repository/` - Manages database access with Spring Data JPA.
-* `entity/` - Defines database tables.
-* `mapper/` - Uses MapStruct for data conversion.
+- `controller/` - Handles API requests.
+- `service/` - Contains business logic, including pricing calculations.
+- `repository/` - Manages database access with Spring Data JPA.
+- `entity/` - Defines database tables.
+- `mapper/` - Uses MapStruct for data conversion.
 
 ### Frontend (`/frontend`)
 
 Built with Next.js App Router:
 
-* `app/(protected)/` - Pages for logged-in users, like the dashboard and POS.
-* `app/client/` - The public price ticker view.
-* `components/ui/` - Reusable UI components from Shadcn/Radix.
+- `app/(protected)/` - Pages for logged-in users, like the dashboard and POS.
+- `app/client/` - The public price ticker view.
+- `components/ui/` - Reusable UI components from Shadcn/Radix.
 
 ## 📈 Current Status
 
@@ -126,17 +117,17 @@ We're transparent about the challenges—here's what's on our radar. For more de
 
 ### Backend
 
-* **Performance:** Some database queries could be optimized to avoid loading extra data unnecessarily (N+1 query problems).
-* **Pricing Logic:** Revenue calculations are currently using base prices instead of sale prices, which means analytics aren't accurate right now. We're fixing this to ensure reports reflect real earnings.
-* **Security:** Public endpoints need better protection to prevent unauthorized access.
-* **Validation:** We need stricter checks to prevent things like negative prices or invalid stock changes.
-* **Testing:** More tests for edge cases, like concurrent updates or bad inputs.
+- **Performance:** Some database queries could be optimized to avoid loading extra data unnecessarily (N+1 query problems).
+- **Pricing Logic:** Revenue calculations are currently using base prices instead of sale prices, which means analytics aren't accurate right now. We're fixing this to ensure reports reflect real earnings.
+- **Security:** Public endpoints need better protection to prevent unauthorized access.
+- **Validation:** We need stricter checks to prevent things like negative prices or invalid stock changes.
+- **Testing:** More tests for edge cases, like concurrent updates or bad inputs.
 
 ### Frontend
 
-* **Code Organization:** Some pages, like the inventory one, are large and could be broken into smaller, reusable components.
-* **Type Safety:** We should share data types between backend and frontend to catch errors early.
-* **User Experience:** The public ticker needs to work better on smaller screens.
+- **Code Organization:** Some pages, like the inventory one, are large and could be broken into smaller, reusable components.
+- **Type Safety:** We should share data types between backend and frontend to catch errors early.
+- **User Experience:** The public ticker needs to work better on smaller screens.
 
 ## 🤝 How to Contribute
 
