@@ -271,7 +271,7 @@ export default function ClientProductsByCategory() {
       </div>
 
       {/* FOOTER – sponsorid, aga ikka sama kaardi sees */}
-      <footer className="mt-10 justify-center hidden"></footer>
+      <footer className="mt-10 flex justify-center hidden"></footer>
     </div>
   );
 }
